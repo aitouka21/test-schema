@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Request",
+  "type": "object",
+  "required": [
+    "body",
+    "pathParameters",
+    "queryStringParameters"
+  ],
+  "properties": {
+    "body": {
+      "$ref": "#/definitions/Body"
+    },
+    "pathParameters": {
+      "$ref": "#/definitions/PathParameters"
+    },
+    "queryStringParameters": {
+      "$ref": "#/definitions/QueryStringParameters"
+    }
+  },
+  "definitions": {
+    "Baz": {
+      "type": "string",
+      "enum": [
+        "Baz1"
+      ]
+    },
+    "Body": {
+      "type": "object",
+      "required": [
+        "bar",
+        "foo"
+      ],
+      "properties": {
+        "bar": {
+          "type": "string"
+        },
+        "foo": {
+          "type": "string"
+        }
+      }
+    },
+    "FooId": {
+      "type": "string",
+      "format": "ulid"
+    },
+    "PathParameters": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/FooId"
+        }
+      }
+    },
+    "QueryStringParameters": {
+      "type": "object",
+      "required": [
+        "baz"
+      ],
+      "properties": {
+        "baz": {
+          "$ref": "#/definitions/Baz"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+  "lambda/*",
+]
+
+[workspace.dependencies]
+schemars = "0.8.11"

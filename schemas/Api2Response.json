@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Response",
+  "type": "object",
+  "required": [
+    "bar",
+    "date",
+    "foo"
+  ],
+  "properties": {
+    "bar": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "foo": {
+      "type": "string"
+    }
+  }
+}
