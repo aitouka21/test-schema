@@ -3,8 +3,8 @@ use schemars::JsonSchema;
 use serde::Serialize;
 
 #[derive(Serialize, JsonSchema)]
-pub struct Response {
-    foo: String,
+pub struct Response<'a> {
+    foo: &'a str,
     bar: String,
     date: DateTime<Utc>,
 }
